@@ -43,6 +43,7 @@ public class FlipEventView extends View {
         @Override
         public boolean onDown(MotionEvent e) {
             Log.d(TAG, "onDown");
+            presenter.onDown(e.getX());
             return true;
         }
 
@@ -78,6 +79,12 @@ public class FlipEventView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
+        if (event.getAction() == MotionEvent.ACTION_UP) {
+            presenter.onUp(event.getX());
+            return true;
+        }
+
         return detector.onTouchEvent(event);
     }
 

@@ -6,14 +6,15 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/white"
         tools:context="flipview.com.karrel.flipviewsample.view.MainActivity">
 
 
         <flipview.com.karrel.flipviewsample.view.FlipCardView
-            android:background="#4a8cdc"
             android:id="@+id/flipCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="#4a8cdc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

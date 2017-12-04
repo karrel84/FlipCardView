@@ -7,8 +7,14 @@ package flipview.com.karrel.flipviewsample.presenter;
 public interface FlipCardPresenter {
     void onScroll(float pressedX, float moveX);
 
+    void onDown(float x);
+
+    void onUp(float x);
+
     interface View {
 
         void rotateY(float rotateY);
+
+        void showCard1(boolean b);
     }
 }
