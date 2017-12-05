@@ -6,30 +6,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageA"
+        <FrameLayout
+            android:id="@+id/cardALayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="#ff0000"
-            android:src="@drawable/images"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageB"
+        <FrameLayout
+            android:id="@+id/cardBLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="#071ec9"
-            android:src="@drawable/goobuki"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <flipview.com.karrel.flipviewsample.view.FlipEventView
+        <flipview.com.karrel.flipcardview.view.FlipEventView
             android:id="@+id/flipEventView"
             android:layout_width="0dp"
             android:layout_height="0dp"

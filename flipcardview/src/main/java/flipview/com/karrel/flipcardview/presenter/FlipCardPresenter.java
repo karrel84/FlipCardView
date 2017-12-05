@@ -1,4 +1,4 @@
-package flipview.com.karrel.flipviewsample.presenter;
+package flipview.com.karrel.flipcardview.presenter;
 
 import android.view.MotionEvent;
 
