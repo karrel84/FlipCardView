@@ -1,8 +1,25 @@
 # FlipCardView
+카드를 뒤집듯이 볼 수 있는 뷰가 필요해서 만들었다.
 
 # 스크린샷
+![Screenshot](https://github.com/karrel84/FlipCardView/blob/master/screenshot.png?raw=true)
 
 # JitPack에서 그래들로 받기
+## root build.gradle에 jitpack을 추가합니다.
+```java
+ allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+## app build.gradle의 dependencies에 라이브러리 주소를 추가합니다.
+```java
+	dependencies {
+	        compile 'com.github.karrel84:FlipCardView:1.0'
+	}
+```
 
 # 사용방법
 
