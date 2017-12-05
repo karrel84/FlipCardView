@@ -1,8 +1,6 @@
 package flipview.com.karrel.flipcardview.presenter;
 
 
-import android.util.Log;
-
 /**
  * Created by Rell on 2017. 12. 1..
  */
@@ -49,8 +47,6 @@ public class FlipCardPresenterImpl implements FlipCardPresenter {
         } else {
             view.rotateY(isShowFrontCard, rotateY + 180f);
         }
-
-        Log.d(TAG, String.format("rotateY : %s", rotateY));
     }
 
     @Override
