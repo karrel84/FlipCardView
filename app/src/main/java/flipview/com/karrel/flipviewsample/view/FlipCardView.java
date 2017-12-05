@@ -1,5 +1,6 @@
 package flipview.com.karrel.flipviewsample.view;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.Nullable;
@@ -45,18 +46,29 @@ public class FlipCardView extends LinearLayout implements FlipCardPresenter.View
         presenter = new FlipCardPresenterImpl(this);
         binding.flipEventView.setPresenter(presenter);
 
-        binding.image.setCameraDistance(10000f);
+        binding.imageA.setCameraDistance(40000f);
+        binding.imageB.setCameraDistance(40000f);
     }
 
     @Override
-    public void rotateY(float rotateY) {
-        Log.d(TAG, String.format("rotateY(%s)", rotateY));
-        binding.image.setRotationY(rotateY);
+    public void showFrontCard(boolean b) {
+        Log.e(TAG, String.format("showFrontCard(%s)", b));
+        binding.imageA.setVisibility(b ? View.VISIBLE : View.GONE);
+        binding.imageB.setVisibility(!b ? View.VISIBLE : View.GONE);
     }
 
     @Override
-    public void showCard1(boolean b) {
-        binding.image.setVisibility(b ? View.VISIBLE : View.GONE);
-        binding.image2.setVisibility(!b ? View.VISIBLE : View.GONE);
+    public void rotateY(boolean b, float rotateY) {
+        if (b) binding.imageA.setRotationY(rotateY);
+        else binding.imageB.setRotationY(rotateY);
+    }
+
+    @Override
+    public void rotateAnimation(long duration, boolean isShowFrontCard, float startY, float endY) {
+        Log.d(TAG, String.format("rotate startY : %s, endY : %s", startY, endY));
+        ObjectAnimator animation1 = ObjectAnimator.ofFloat(isShowFrontCard ? binding.imageA : binding.imageB, "rotationY", 0f);
+        animation1.setDuration(duration);
+        animation1.start();
+
     }
 }
