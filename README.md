@@ -5,7 +5,7 @@
 ![Screenshot](https://github.com/karrel84/FlipCardView/blob/master/screenshot.png?raw=true)
 
 # JitPack에서 그래들로 받기
-root build.gradle에 jitpack을 추가합니다.
+* root build.gradle에 jitpack을 추가합니다.
 ```java
  allprojects {
 		repositories {
@@ -14,7 +14,7 @@ root build.gradle에 jitpack을 추가합니다.
 		}
 	}
 ```
-app build.gradle의 dependencies에 라이브러리 주소를 추가합니다.
+* app build.gradle의 dependencies에 라이브러리 주소를 추가합니다.
 ```java
 	dependencies {
 	        compile 'com.github.karrel84:FlipCardView:1.0'
@@ -22,7 +22,7 @@ app build.gradle의 dependencies에 라이브러리 주소를 추가합니다.
 ```
 
 # 사용방법
-xml에 FlipCardView를 추가
+* xml에 FlipCardView를 추가
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -50,7 +50,7 @@ xml에 FlipCardView를 추가
 
 </layout>
 ```
-flipCardView 에 카드 A와 B넣기
+* flipCardView 에 카드 A와 B넣기
 ```java
     private void setupCardView() {
         ViewCardABinding aBinding = DataBindingUtil.inflate(LayoutInflater.from(this), R.layout.view_card_a, null, false);
