@@ -4,7 +4,7 @@
 # 스크린샷
 ![Screenshot](https://github.com/karrel84/FlipCardView/blob/master/screenshot.png?raw=true)
 
-# JitPack에서 그래들로 받기
+# 환경설정 - JitPack
 * root build.gradle에 jitpack을 추가합니다.
 ```java
  allprojects {
