@@ -5,7 +5,9 @@ import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -77,5 +79,11 @@ public class FlipCardView extends LinearLayout implements FlipCardPresenter.View
     public void setCardB(View view) {
         binding.cardBLayout.removeAllViews();
         binding.cardBLayout.addView(view);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.e(TAG, String.format("FlipCardView :: onTouchEvent()"));
+        return binding.flipEventView.onTouchEvent(event);
     }
 }

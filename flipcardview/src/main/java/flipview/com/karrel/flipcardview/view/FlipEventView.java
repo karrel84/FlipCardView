@@ -3,6 +3,7 @@ package flipview.com.karrel.flipcardview.view;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -12,7 +13,7 @@ import flipview.com.karrel.flipcardview.presenter.FlipCardPresenter;
 
 /**
  * Created by Rell on 2017. 12. 1..
- *
+ * <p>
  * 카드의 이벤트를 담당하는 뷰이다.
  * 플링이벤트의 경우 안드로이드의 left drawer 오픈소스를 참고하여 만들었다..
  */
@@ -188,6 +189,7 @@ public class FlipEventView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Log.e(TAG, String.format("FlipEventView :: onTouchEvent()"));
 
         if (event.getAction() == MotionEvent.ACTION_UP) {
             presenter.onUp(event.getX());
